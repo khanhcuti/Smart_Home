@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: flex;
+    background: linear-gradient(135deg, #0061f2 0%, #00a7e1 100%);
+    color: white;
+    margin: 20px 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+header .icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.header-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.icon span {
+    display: inline-block;
+}
+
+.menu > ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu > ul li a {
+    font-weight: bold;
+    color: white;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+.menu > ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#parameter {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    margin: 20px 30px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.parameter-item {
+    background: white;
+    color: rgb(12, 12, 12);
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.parameter-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    display: block;
+}
+
+.icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.value {
+    font-size: 2.2em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-right: 5px;
+}
+
+.label {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+#main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+#chart {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-top: 40px; /* Thêm khoảng cách phía trên */
+    background: white; /* Thêm background */
+    margin-left: 30px; /* Căn lề trái */
+    margin-right: 30px; /* Căn lề phải */
+    border-radius: 20px; /* Bo góc */
+    padding: 30px 40px; /* Thêm padding */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Thêm shadow */
+}
+
+#chart {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px; /* Thêm padding bên phải */
+}
+
+#button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 30px; /* Giảm padding */
+    border-left: 1px solid #eee; /* Thêm đường phân cách */
+}
+
+/* Cập nhật style cho control-item */
+.control-item {
+    background: white;
+    border-radius: 15px;
+    padding: 25px 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%; /* Đảm bảo chiều rộng đồng nhất */
+    min-width: 300px; /* Đặt chiều rộng tối thiểu */
+}
+
+.control-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.control-item .icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 80px;
+}
+
+.control-item .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.switch-btn {
+    background: linear-gradient(135deg, #0061f2 0%, #00a7e1 100%);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.switch-btn:hover:not([disabled]) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.switch-btn[disabled] {
+    background: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+@keyframes bulbOn {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.control-item .icon img.on {
+    animation: bulbOn 2s infinite;
+}

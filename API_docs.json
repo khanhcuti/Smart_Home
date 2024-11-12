@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "0bd27608-68b6-475f-95e9-373a0b975fc2",
+		"name": "Smart Home API Copy 2",
+		"description": "API documentation for Smart Home IoT project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39155790"
+	},
+	"item": [
+		{
+			"name": "Get Sensor Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/datasensor?sortType=temperature&sortOrder=desc&specificDate=2024-01-20&pageSize=10&currentPage=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"datasensor"
+					],
+					"query": [
+						{
+							"key": "sortType",
+							"value": "temperature",
+							"description": "Field to sort by: temperature, humidity, light, timestamp"
+						},
+						{
+							"key": "sortOrder",
+							"value": "desc",
+							"description": "Sort direction: asc, desc"
+						},
+						{
+							"key": "specificDate",
+							"value": "2024-01-20",
+							"description": "Filter by date/time. Formats: YYYY-MM-DD, HH:mm:ss, YYYY-MM-DD HH:mm:ss"
+						},
+						{
+							"key": "pageSize",
+							"value": "10",
+							"description": "Number of records per page (default: 10)"
+						},
+						{
+							"key": "currentPage",
+							"value": "1",
+							"description": "Page number (default: 1)"
+						}
+					]
+				},
+				"description": "Get sensor data with pagination, sorting and date filtering"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Control History",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/actionhistory?sortType=device&specificDate=2024-01-20&pageSize=10&currentPage=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"actionhistory"
+					],
+					"query": [
+						{
+							"key": "sortType",
+							"value": "device",
+							"description": "Sort by: device, status (ON/OFF), timestamp, id"
+						},
+						{
+							"key": "specificDate",
+							"value": "2024-01-20",
+							"description": "Filter by date/time. Formats: YYYY-MM-DD, HH:mm:ss, YYYY-MM-DD HH:mm:ss"
+						},
+						{
+							"key": "pageSize",
+							"value": "10",
+							"description": "Number of records per page (default: 10)"
+						},
+						{
+							"key": "currentPage",
+							"value": "1",
+							"description": "Page number (default: 1)"
+						}
+					]
+				},
+				"description": "Get device control history with filtering and pagination"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Display Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/display?type=values",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"display"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "values",
+							"description": "Data type: 'values' for latest record, 'chart' for latest 5 records"
+						}
+					]
+				},
+				"description": "Get sensor data for display. Use type=values for latest single record or type=chart for latest 5 records"
+			},
+			"response": []
+		}
+	]
+}

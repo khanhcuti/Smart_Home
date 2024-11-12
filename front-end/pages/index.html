@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0"></script>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="icon">
+            <img src="../img/smarthome.png" alt="Icon" class="header-icon">
+            <span>SmartHome</span>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="sensordata.html">Measure History</a></li>
+                <li><a href="historycontrol.html">Control History</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="dashboardContent">
+        <div id="parameter">
+            <div class="parameter-item" id="temperature">
+                <div class="icon"><img src="../img/temperature.gif" alt="Temperature Icon" class="icon-img" style="width: 80px; height: 80px;"></div>
+                <div class="value"><span id="temperatureValue">--</span>°C</div>
+                <div class="label">Nhiệt độ</div>
+            </div>
+            
+            <div class="parameter-item" id="humidity">
+                <div class="icon"><img src="../img/humidity.gif" alt="Humidity Icon" class="icon-img" style="width: 80px; height: 80px;"></div>
+                <div class="value"><span id="humidityValue">--</span>%</div>
+                <div class="label">Độ ẩm</div>
+            </div>
+            
+            <div class="parameter-item" id="light">
+                <div class="icon"><img src="../img/sun.gif" alt="Light Icon" class="icon-img" style="width: 80px; height: 80px;"></div>
+                <div class="value"><span id="lightValue">--</span> lux</div>
+                <div class="label">Ánh sáng</div>
+            </div>
+        </div>
+
+        <div id="main-content">
+            <div id="chart">
+                <canvas id="sensorChart" width="400" height="200"></canvas>
+            </div>
+            
+            <div id="button">
+                <div class="control-item">
+                    <div class="icon"><img id="light-icon" src="../img/light-bulb.png" alt="Light Icons"></div>
+                    <div class="switch">
+                        <button class="switch-btn" id="led1On">ON</button>
+                        <button class="switch-btn" id="led1Off">OFF</button>
+                    </div>
+                </div>
+                <div class="control-item">
+                    <div class="icon"><img id="ac-icon" src="../img/air-conditioner.png" alt="Conditioner Icons"></div>
+                    <div class="switch">
+                        <button class="switch-btn" id="led2On">ON</button>
+                        <button class="switch-btn" id="led2Off">OFF</button>
+                    </div>
+                </div>
+                <div class="control-item">
+                    <div class="icon"><img id="fan-icon" src="../img/fan.png" alt="Fan Icons"></div>
+                    <div class="switch">
+                        <button class="switch-btn" id="led3On">ON</button>
+                        <button class="switch-btn" id="led3Off">OFF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

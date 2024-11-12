@@ -1,0 +1,129 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    background: linear-gradient(135deg, #0061f2 0%, #00a7e1 100%);
+    color: white;
+    margin: 20px 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin: 30px 0;
+    font-weight: 600;
+    font-size: 1.8em;
+}
+
+/* Container cho phần tìm kiếm và bảng */
+.content-container {
+    margin: 20px 30px;  /* Căn lề giống header */
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+    padding: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.left-controls select, 
+.search-controls input {
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+#searchButton {
+    background: linear-gradient(135deg, #0061f2 0%, #00a7e1 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#searchButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th {
+    background: linear-gradient(135deg, #0061f2 0%, #00a7e1 100%);
+    color: white;
+    padding: 15px;
+    font-weight: 500;
+}
+
+td {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #f0f2f5;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background: linear-gradient(135deg, #0061f2 0%, #00a7e1 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination button:hover:not([disabled]) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.pagination button:disabled {
+    background: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-weight: 500;
+    color: #2c3e50;
+}

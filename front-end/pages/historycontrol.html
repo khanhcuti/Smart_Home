@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dữ liệu cảm biến</title>
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/historycontrol.js"></script>
+</head>
+<body>
+    <header>
+        <div class="icon">
+            DashBoard
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="sensordata.html">Measure History</a></li>
+                <li><a href="historycontrol.html">Control History</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <h1>Lịch Sử Điều Khiển Thiết Bị</h1>
+    <div class="search-container">
+        <div class="left-controls">
+            <select id="sortType">
+                <option value="">Sắp xếp theo</option>
+                <option value="ON">ON</option>
+                <option value="OFF">OFF</option>
+            </select>
+            <select id="pageSize">
+                
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>
+        </div>
+        <div class="search-controls">
+            <input type="text" id="specificDate" placeholder="Nhập thời gian cụ thể (MM/DD/YYYY, HH:MM AM/PM)">
+            <button id="searchButton">Tìm Kiếm</button>
+        </div>
+    </div>
+    <table id="actionHistoryTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Thiết Bị</th>
+                <th>Trạng Thái</th>
+                <th>Thời gian</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
+        </tbody>
+    </table>
+    <div id="pagination" class="pagination"></div>
+</body>
+</html>
